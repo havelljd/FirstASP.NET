@@ -2,8 +2,14 @@
 
 submit.addEventListener("click", function () {
     let sGradeOutput = "";
-    let sGradeInput = document.getElementById("input").value;
-    let iGrade = parseInt(sGradeInput);
+    let iAssignmentInput = document.getElementById("assignmentinput").value;
+
+    let iGroup = document.getElementById("groupinput").value
+    let iQuiz = document.getElementById("quizinput").value
+    let iExam = document.getElementById("examinput").value
+    let iIntex = document.getElementById("intexinput").value
+
+    let iGrade = parseFloat(parseFloat(iAssignmentInput) * .5) + parseFloat(parseFloat(iGroup) * .1) + parseFloat(parseFloat(iQuiz) * .1) + parseFloat(parseFloat(iExam) * .2) + parseFloat(parseFloat(iIntex) * .1);
 
 
     if (iGrade >= 93) {
@@ -42,7 +48,7 @@ submit.addEventListener("click", function () {
     else {
         sGradeOutput = "F";
     }
-    document.getElementById("output").innerHTML = sGradeOutput;
+    document.getElementById("output").innerHTML = String(sGradeOutput) + " " + String(iGrade);
 }
 )
 
