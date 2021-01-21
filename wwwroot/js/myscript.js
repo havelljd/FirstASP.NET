@@ -1,6 +1,8 @@
 ﻿let submit = document.getElementById("submit");
 
 submit.addEventListener("click", function () {
+    //just getting all the variables, converting to floats, assigning correct percentages based on the class, and then pushing it out to a p tag on the page
+
     let sGradeOutput = "";
     let iAssignmentInput = document.getElementById("assignmentinput").value;
 
@@ -10,7 +12,6 @@ submit.addEventListener("click", function () {
     let iIntex = document.getElementById("intexinput").value
 
     let iGrade = parseFloat(parseFloat(iAssignmentInput) * .5) + parseFloat(parseFloat(iGroup) * .1) + parseFloat(parseFloat(iQuiz) * .1) + parseFloat(parseFloat(iExam) * .2) + parseFloat(parseFloat(iIntex) * .1);
-
 
     if (iGrade >= 93) {
         sGradeOutput = "A";
