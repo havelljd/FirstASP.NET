@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model FirstASP.NET.Models.CalculatorModel
+<body>
+    <br />
+    <h2>Grade Calculator:</h2>
+    <form method="post">
+        <label for="assignmentinput">Enter Assignment percentage here:</label>
+        <input type="number" maxlength="3" id="assignmentinput" asp-for="assignmentinput" />
+        <br />
+        <label for="groupinput">Enter Group Project percentage here:</label>
+        <input type="number" maxlength="3" id="groupinput" asp-for="groupinput" />
+        <br />
+        <label for="quizinput">Enter quiz percentage here:</label>
+        <input type="number" maxlength="3" id="quizinput" asp-for="quizinput" />
+        <br />
+        <label for="examinput">Enter Exam percentage here:</label>
+        <input type="number" maxlength="3" id="examinput" asp-for="examinput" />
+        <br />
+        <label for="intexinput">Enter INTEX percentage here:</label>
+        <input type="number" maxlength="3" id="intexinput" asp-for="intexinput" />
+        <br />
+        <button type="submit" value="Submit" id="submit">Submit</button>
+    </form>
+    Grade:    <p id="output" name="output"></p>
+    <div asp-validation-summary="All"></div>
+</body>
