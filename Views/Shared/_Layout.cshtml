@@ -9,14 +9,16 @@
     @RenderBody()
      <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
      <script src="../js/myscript.js"></script>
-<body>
-    <header>
-        <menu>
-            <ul>
-                <li><a asp-controller="Home" asp-action="Index">Home</a></li>
-                <li><a asp-controller="Home" asp-action="Calculator">Calculator</a></li>
-            </ul>
-        </menu>
-    </header>
-</body>
+     <body>
+         <header>
+             <h1>@ViewBag.Title</h1>
+             <menu>
+                 <ul>
+                     <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                     <li><a asp-controller="Home" asp-action="Calculator">Calculator</a></li>
+                 </ul>
+             </menu>
+         </header>
+
+     </body>
      </html>
