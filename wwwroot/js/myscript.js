@@ -52,6 +52,7 @@
             sGradeOutput = "F";
         }
         //alert(String(sGradeOutput) + "         " + String(iGrade));
+        //I had to store the thing to local storage to keep it to display. Not the best solution, but itworks.
 
         let result = String(sGradeOutput) + " " + String(iGrade)
         localStorage.setItem("output", result);
